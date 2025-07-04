@@ -1,0 +1,74 @@
+{
+    
+    "config": {
+
+        "wifi-ssid": {
+
+            "help": "WiFi SSID",
+
+            "value": "\"RT-GPON-DF1B\""
+
+        },
+
+        "wifi-password": {
+
+            "help": "WiFi Password",
+
+            "value": "\"yt6vf88B\""
+
+        },
+
+        "tx": {
+
+            "help": "TX pin for serial connection",
+
+            "value": "D8"
+
+        },
+
+        "rx": {
+
+            "help": "RX pin for serial connection",
+
+            "value": "D2"
+
+        },
+
+        "socket-bufsize": {
+
+            "help": "Max socket data heap usage",
+
+            "value": "1024"
+
+        }
+
+    },
+
+    "target_overrides": {
+
+        "*": {
+            "platform.minimal-printf-enable-floating-point": true,
+
+            "platform.stdio-baud-rate": 115200,
+
+            "platform.default-serial-baud-rate": 115200,
+
+            "esp8266.tx": "D8",
+
+            "esp8266.rx": "D2",
+
+            "esp8266.socket-bufsize": "1024",
+
+            "esp8266.debug": false,
+
+            "platform.stdio-convert-newlines": true,
+
+            "esp8266.provide-default" : true,
+
+            "target.network-default-interface-type": "WIFI"           
+
+        }
+
+    }
+
+}
